@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  root "wallets#index"
+
+  get "/wallets", to: "wallets#index"
+  get "/wallets/:id", to: "wallets#show", as: "wallet"
 end
